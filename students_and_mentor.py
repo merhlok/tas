@@ -86,20 +86,18 @@ lecturer1.courses_attached = ["Python"]
 student1 = Student("Ольга", "Сидорова", "ж")
 student1.courses_in_progress = ["Python"]
 
-# Создаем ревьювера и выставляем оценки студенту
+
 reviewer1 = Reviewer("Алексей", "Смирнов")
 reviewer1.courses_attached = ["Python"]
 reviewer1.rate_hw(student1, "Python", 9)
 reviewer1.rate_hw(student1, "Python", 10)
 
-# Студенты оценивают лекторов
+
 student1.rate_lect(lecturer1, "Python", 9)
 student1.rate_lect(lecturer1, "Python", 10)
 
 print(lecturer1)
-print("\n" + "-"*50 + "\n")
 print(student1)
-print("\n" + "-"*50 + "\n")
 print("Сравнение средних оценок:")
 print("Студент > Лектор:", student1 >= lecturer1)
 print("Студент < Лектор:", student1 <= lecturer1)
